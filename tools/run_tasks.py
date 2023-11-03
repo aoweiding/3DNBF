@@ -22,7 +22,7 @@ for cfg in glob(f'{INPUT_DIR}/*.py'):
     print('running command: \n'+ cmd)
     os.system(cmd)
 
-    # # visualization
+    # # visualization .
     # cmd = f'CUDA_VISIBLE_DEVICES=0 bash tools/run_visualization.sh ' \
     #         f'{cfg} {OUTPUT_DIR}/{task_name} '
     # print('running command: \n'+ cmd)
