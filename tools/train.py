@@ -64,7 +64,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-
+    # Configurations for the models
     cfg = Config.fromfile(args.config)
     if args.options is not None:
         cfg.merge_from_dict(args.options)

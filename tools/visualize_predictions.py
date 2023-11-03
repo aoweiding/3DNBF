@@ -39,11 +39,11 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-
+#Create visualizations of the human pose predictions.
 def visualize_prediction(img, pose, betas, camera, visualizer, color=(0.6, 0.6, 1), vis_res=512, device='cpu'):
     img_tensor = torch.tensor(img[None], device=device)
-    pred_pose = torch.tensor(pose[None], device=device).float()
-    pred_betas = torch.tensor(betas[None], device=device).float()
+    pred_pose = torch.tensor(pose[None], device=device).float()#pose of the human
+    pred_betas = torch.tensor(betas[None], device=device).float()#shape of the human.
     pred_cam = torch.tensor(camera[None], device=device).float()
     pred_cam_t = convert_weak_perspective_to_perspective(
                 pred_cam,
@@ -87,7 +87,7 @@ def visualize_prediction_pth(img, pose, betas, camera, visualizer, vis_res=512, 
                             color=(0.6, 0.6, 1), background=None,
                             rotate_around_y=90)
     return res['image'], res_rot['image']
-
+#Use SMPLVisualizer. Error MPJPE. 
 def main():
     args = parse_args()
 

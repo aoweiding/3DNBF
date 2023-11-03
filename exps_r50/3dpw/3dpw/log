@@ -1,0 +1,172 @@
+Traceback (most recent call last):
+  File "tools/test.py", line 19, iTraceback (Traceback (most recent call last):
+  File "tools/test.py", line 19, in <module>
+    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/__init__.py", li
+  File "/mnt/data    from mmhuman3d.apis import inference, test, train
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/inference.py", li  File "/mnt/data1    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mn    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mnt/data1/home/ad    from mmhuman3d.apis import inference, test, train
+    from .base_    from mmhuman3d.apis import inference, test, train
+    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/inference.py", line 8, in <module>
+  File "/mnt/data1/home/ading7    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipeline  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelines/__init__.py", line 11, 
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/__init_
+  File "/mnt/data1/home/ad    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelines/hybrik_transfor
+  File "/mnt/data1/home/adi    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7    from mmhuman3d.core.conventions.keypoints_mapping import get_flip    fro  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__ini  File "/mnt/data1/home/ading    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelin
+  File "/mnt/data1/home/ading7/3DNBF/    from mmhuman3d.core.conventions import cameras, keypoints_mapping    from mmhuma  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelin
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/dat    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/    from mmhuman3d.core.conventions.keypoints_mapping import get_flip    fr
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__in
+  File "/mnt/data1/home/ading    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee   File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/__init__.py", li  File "/mnt/data1/    from mmhuman3d.core.conventions import cameras, keypoints_mapping    from mmhum
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/came
+  File "/mnt/data1/home/ading7/3DNBF/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/image_utils.py"
+  File "/mnt/data1/hom    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/came
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError: No module named 'VoGE'
+    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+  File "/mnt/data1/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/image_utils.py"
+  File "/mnt/data1/hom    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError: No module named 'VoGE'
+Traceback (most recent call last):
+  File "tools/test.py", line 19, iTraceback (    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/__init__.py", lin  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/  File "tools/test.py", line 19, iTraceback (    from mmhuman3d.apis import inference, test, train    from mmhuman3d.afrom mmhuman3d.apis import inference, test,  File    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/inference.py", li  File "/mnt/data1    from mmhuman3d.apis import inference, test, train    
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/inference.py    
+  File "/mnt/data1from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/__init__  File "/mnt/data1/home/ad    from mmhuman3d.data.datasets.pipelines import Compose
+      File     from mmhuman3d.data.datasets.pipelines import Compose
+      File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/__init__.py", line 2, in <module>
+from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/base_dataset.py", line 7, in <module>
+    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/base_dataset.py", line 7, in <module>
+    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelines/__init__.py", line 11, in <module>
+        from .pipelines import Composefrom .hybrik_transforms import (
+
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelines/__init__.py", line 11, in <module>
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelines/hybrik_transforms.py", line 8, in <module>
+        from mmhuman3d.core.conventions.keypoints_mapping import get_flip_pairs
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__init__.py", line 1, in <module>
+from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipelines/hybrik_transforms.py", line 8, in <module>
+    from mmhuman3d.core.conventions import cameras, keypoints_mapping, segmentation
+      File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/cameras/__init__.py", line 1, in <module>
+fro  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__in
+  File "/mnt/data1/home/ading    from mmhuman3d.core.conventions.cameras import (
+      File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/c      File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/cameras/convert_convention.py", line 7, in <module>
+from mmhuma  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/cameras/__init__.py", line 1, in <module>
+    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+  File "/mnt/data1/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home/adfrom mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError:     No module named 'VoGE'from mmhuman3d.utils.tModuleNotFoundError:     No module named 'VoGE'from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+
+  File "/mnt/data1/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/hom    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError:     from VoGE.Meshes imTraceback (most recent call last):
+  File "tools/test.py", line 19, iTraceback (    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/__init__.py", lin  File "/mnt/data    from mmhuman3d.apis import inference, test, train
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/inference.py", li  File "/mnt/data1    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mn    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mnt/data1/home/ad    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/adi    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipeline  File "/mnt/data1/home/ading7/3DNBF/    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipeline  File "/mnt/data1/home/ading7/3DNBF/mmhuman3    from mmhuman3d.core.conventions.keypoints_mapping import get_flip_paifr
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__ini  File "/mnt/data1/home/ading    from mmhuman3d.core.conventions import cameras, keypoints_mapping, sefrom mmhum
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/__init__.py", li  File "/mnt/data1/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/image_utils.py",  File "/mnt/data1/hom    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError: No module named 'VoGE'
+Traceback (most recent call last):
+  File "tools/test.py", line 19, in <module>
+    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/__init__.py", lin  File "/mnt/data    from mmhuman3d.apis import inference, test, train
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/apis/inference.py", li  File "/mnt/data1    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/__init__  File "/mnt/data1/home/ad    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/base_dat  File "/mnt/data1/home/ading7    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipeline  File "/mnt/data1/home/ading7/3DNBF/    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/data/datasets/pipeline  File "/mnt/data1/home/ading7/3DNBF/mmhuman3    from mmhuman3d.core.conventions.keypoints_mapping import get_flip_paifr
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__ini  File "/mnt/data1/home/ading    from mmhuman3d.core.conventions import cameras, keypoints_mapping, sefrom mmhum
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/camer  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/__init__.py", li  File "/mnt/data1/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/image_utils.py",  File "/mnt/data1/hom    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError: No module named 'VoGE'
+Traceback (most recent call last):
+  File "tools/test.py", line 19, iTraceback (    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data    from mmhuman3d.apis import inference, test, train
+  File "/mnt/da    from mmhuman3d.apis import inference, test, train
+  File "/mnt/data1    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mn    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mnt/data1/home/ad    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/adi    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DN    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3    from mmhuman3d.core.conventions.keypoints_mapping import get_flip    from mmhuman3d.core.conventions.keypoints_mapping import get_flip_pairs
+  File "/mnt/data1/home/ading    from mmhuman3d.core.conventions import cameras, keypoints_mapping    from mmhuman3d.core.conventions import cameras, keypoints_mapping, segmentation
+  File "/mnt/data1/home/ading7/3DNBF/    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/dat    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+  File "/mnt/data1/    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/hom    from VoGE.Meshes import GaussianMeshesNaive
+ModuleNotFoundError: No module named 'VoGE'
+Traceback (most recent call last):
+  File "tools/test.py", line 19, iTraceback (    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File    from mmhuman3d.apis import multi_gpu_test, single_gpu_test
+  File "/mnt/data    from mmhuman3d.apis import inference, test, train
+  File "/mnt/da    from mmhuman3d.apis import inference, test, train
+  File "/mnt/data1    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mn    from mmhuman3d.data.datasets.pipelines import Compose
+  File "/mnt/data1/home/ad    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/adi    from .base_dataset import BaseDataset
+  File "/mnt/data1/home/ading7    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DN    from .pipelines import Compose
+  File "/mnt/data1/home/ading7/3DNBF/    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3    from .hybrik_transforms import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3    from mmhuman3d.core.conventions.keypoints_mapping import get_flip    from mmhuman3d.core.conventions.keypoints_mapping import get_flip_pairs
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/__init__.py", line 1, in <module>
+    from mmhuman3d.core.conventions import cameras, keypoints_mapping, segmentation
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/cameras/__init__.py", line 1, in <module>
+    from mmhuman3d.core.conventions.cameras import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/core/conventions/cameras/convert_convention.py", line 7, in <module>
+    from mmhuman3d.utils.transforms import ee_to_rotmat, rotmat_to_ee
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/__init__.py", line 89, in <module>
+    from mmhuman3d.utils.image_utils import (
+  File "/mnt/data1/home/ading7/3DNBF/mmhuman3d/utils/image_utils.py", line 13, in <module>
+    from VoGE.Meshes imTraceback (most recent call last):
+  File "/home/ading7/anaconda3/envTraceback (most recent call last):
+  File "/home/ading7/anaconda3/envs/3dnbf/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/ading7/anaconda3/envs/3dnbf/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/ading7/anaconda3/envs/3dnbf/lib/python3.8/site-packages/torch/distributed/launch.py", line 260, in <module>
+    main()
+  File "/home/ading7/anaconda3/envs/3dnbf/lib/python3.8/site-packages/torch/distributed/launch.py", line 255, in main
+    raise subprocess.CalledProcessError(returncode=process.returncode,
+subprocess.CalledProcessError: Command '['/home/ading7/anaconda3/envs/3dnbf/bin/python', '-u', 'tools/test.py', '--local_rank=7', '--config=exps_r50/3dpw/3dpw.py', '--work-dir=exps_r50/3dpw/3dpw', '--checkpoint=data/pretrained/3dnbf_r50.pth', '--launcher', 'pytorch', '--metr*****************************************
+Setting OMP_NUM_THREADS env*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
