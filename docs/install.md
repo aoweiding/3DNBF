@@ -53,7 +53,13 @@ conda install -c bottler nvidiacub -y
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@v0.4.0"
 ```
 Please refer to [PyTorch3D-install](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) for details.
+Or installed with  CUDA support from Anaconda Cloud, on Linux only.
+```shell
+conda install -c fvcore -c iopath -c conda-forge fvcore iopath -y
+conda install -c bottler nvidiacub -y
 
+conda install pytorch3d==0.4.0 -c pytorch3d
+```
 Your installation is successful if you can do these in command line.
 
 ```shell
