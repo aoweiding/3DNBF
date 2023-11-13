@@ -162,12 +162,16 @@ class HumanImageDataset(BaseDataset, metaclass=ABCMeta):
                 self.saved_partseg = self.hparams.saved_partseg
         else:
             self.saved_partseg = None
-
-        self.occ_info = (
-            json.load(open(self.hparams.occ_info_file))
-            if self.hparams.get('occ_info_file', None)
-            else None
-        )
+        
+        if self.hparams.get('occ_info_file', None):
+            try:
+                with open(self.hparams.occ_info_file, 'r') as file:
+                    self.occ_info = json.load(file)
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"Error loading JSON file: {e}")
+                self.occ_info = None
+        else:
+            self.occ_info = None
 
         if hasattr(self.hparams, 'pred_initialization'):
             if self.hparams.pred_initialization.endswith('.json'):
