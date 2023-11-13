@@ -24,13 +24,13 @@ OCC_STRIDE_TEST = 10
 FIT_Z = False
 OCCLUDE_CENTER = None
 
-test_data = '3dpw_advocc'
+test_data = '3dpw'
 assert test_data in ['3dpw', '3dpw_test', '3dpw_occ', '3dpw_advocc', 
                      '3dpw_advocc_grid', '3dpw_occ_varying', 
                      'h36m', 'mpi_inf_3dhp', '3doh50k']
 
 workflow = [('train', 1)]
-phase = 'train'
+phase = 'test'
 assert phase in ['test', 'train']
 
 hparams = dict(
