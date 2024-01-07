@@ -1,5 +1,5 @@
 _base_ = ['../_base_/default_runtime.py']
-load_from = 'data/pretrained/res50_coco_384x288-e6f795e9_20200709.pth'
+load_from = 'data/pretrained/vitpose-b-multi-coco.pth'
 
 use_adversarial_train = True
 find_unused_parameters = True

@@ -1,5 +1,5 @@
 _base_ = ['../_base_/default_runtime.py']
-load_from = 'exp/3dnbf_pare_kp3d_accu_2dinit/epoch_80.pth'
+load_from = 'exp/3dnbf/latest.pth'
 
 use_adversarial_train = True
 find_unused_parameters = True  # Debug
@@ -24,7 +24,7 @@ OCC_STRIDE_TEST = 10
 FIT_Z = False
 OCCLUDE_CENTER = None
 
-test_data = '3dpw'
+test_data = '3dpw_advocc'
 assert test_data in ['3dpw', '3dpw_test', '3dpw_occ', '3dpw_advocc', 
                      '3dpw_advocc_grid', '3dpw_occ_varying', 
                      'h36m', 'mpi_inf_3dhp', '3doh50k']

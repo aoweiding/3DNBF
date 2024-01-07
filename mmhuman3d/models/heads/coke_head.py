@@ -55,15 +55,14 @@ class CoKeHead(BaseModule):
 
     def forward(self, features):
         output = {}
-
         features=self.upsample3(
                 self.upsample2(
                 self.upsample1(
                 self.upsample0(
-                    features[3]), 
-                    features[2]), 
-                    features[1]), 
-                    features[0])
+                    features[3].unsqueeze(0)), 
+                    features[2].unsqueeze(0)), 
+                    features[1].unsqueeze(0)), 
+                    features[0].unsqueeze(0))
         
         coke_features = self.out_layer(features)
 
