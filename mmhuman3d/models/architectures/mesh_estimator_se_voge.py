@@ -65,7 +65,7 @@ from mmhuman3d.utils.vis_utils import (
     SMPLVisualizer,
 )
 from mmhuman3d.data.datasets.pipelines.transforms import _flip_smpl_pose_batch
-
+from mmhuman3d.models.heads.smpl_head import build_smpl_head
 
 def set_requires_grad(nets, requires_grad=False):
     """Set requies_grad for all the networks.
@@ -146,7 +146,7 @@ class VoGEBodyModelEstimatorSE(BaseArchitecture, metaclass=ABCMeta):
 
         self.backbone = build_backbone(backbone)
         self.neck = build_neck(neck)
-        self.head = build_head(head)
+        self.head = build_smpl_head(head)#build_head(head)
         self.disc = build_discriminator(disc)
         self.hparams = CN.load_cfg(str(hparams))
 
@@ -276,6 +276,7 @@ class VoGEBodyModelEstimatorSE(BaseArchitecture, metaclass=ABCMeta):
             self.optimize_discrinimator(predictions, data_batch, optimizer)
 
         # calculating all loss
+        #predictionis' keys ['pred_pose', 'pred_shape', 'pred_cam']
         losses = self.compute_losses(predictions, targets)
 
         # optimize discriminator we don't have, so continue
@@ -308,7 +309,8 @@ class VoGEBodyModelEstimatorSE(BaseArchitecture, metaclass=ABCMeta):
             log_vars=log_vars,
             num_samples=len(next(iter(data_batch.values()))),
         )
-
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
         return outputs
 
     def run_registration_test_voge(

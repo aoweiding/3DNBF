@@ -3,8 +3,9 @@ _base_ = ['../_base_/default_runtime.py']
 # resume_from = 'exp/neuralsmpl_pare_stage2/epoch_1.pth'
 # load_from = 'exp/neuralsmpl_voge_pare/epoch_100.pth'
 # load_from = 'data/pretrained/pare_official.pth'
-load_from = 'data/pretrained/res50_coco_384x288-e6f795e9_20200709.pth'
-
+load_from = 'data/pretrained/vitpose-h-multi-4dhuman.pth'
+#ading7/3DNBF/data/pretrained/vitpose-h-multi-4dhuman.pth
+#data/pretrained/res50_coco_384x288-e6f795e9_20200709.pt
 use_adversarial_train = True
 find_unused_parameters = True # Debug
 checkpoint_config = dict(interval=5)
@@ -12,7 +13,7 @@ checkpoint_config = dict(interval=5)
 # evaluate
 evaluation = dict(metric=['pa-mpjpe', 'mpjpe'], eval_saved_results=False) #
 
-# img_res = 224
+#img_res = 224
 img_res = 320
 downsample_rate = 4
 d_feature = 128
@@ -25,7 +26,14 @@ num_neg = num_noise * max_group
 loss_weight = 60.0
 workflow = [('train', 1)]
 phase = 'train' #'train'
-
+SMPL = dict(
+    DATA_DIR = 'data',
+    NUM_BODY_JOINTS = 23,
+    MEAN_PARAMS='data/body_models/smpl_mean_params.npz',
+    MODEL_PATH='data/body_models/smpl',
+    JOINT_REGRESSOR_EXTRA ='data/body_models/J_regressor_extra.npy',
+    GENDER = "neutral"
+)
 hparams = dict(
             DATASET=dict(
                 DATASETS_AND_RATIOS='h36m_mpii_lspet_coco_mpi-inf-3dhp_0.35_0.05_0.05_0.2_0.35',
@@ -283,8 +291,8 @@ model = dict(
     backbone=dict(
         type='ViT',
         img_size=(img_res, img_res),
-        patch_size=8,#16,
-        embed_dim=2048,#768,
+        patch_size=16,#16,
+        embed_dim=1280,#768,
         depth=12,
         num_heads=12,
         ratio=1,
@@ -293,16 +301,43 @@ model = dict(
         qkv_bias=True,
         drop_path_rate=0.3,
     ),
-    head=dict(
-        type='PareHeadwCoKe',
-        num_joints=24, 
-        num_input_features=2048,
-        use_heatmaps='part_segm',
-        smpl_mean_params='data/body_models/smpl_mean_params.npz',
-        coke_cfg=dict(
-        type='CoKeHead', #'CoKeHeadMultiScale', 
-        d_coke_feat=d_feature, ),
+    head = dict(
+        type = "transformer_decoder",
+        IN_CHANNELS = 2048,
+        TRANSFORMER_DECODER = dict(
+            depth = 6,
+            heads = 8,
+            mlp_dim = 1024,
+            dim_head = 64,
+            dropout = 0.0,
+            emb_dropout = 0.0,
+            norm = "layer",
+            context_dim = 1280,
         ),
+        SMPL = SMPL,
+        #IN_CHANNELS = 2048,
+        # TRANSFORMER_DECODER = dict(
+        #     depth = 6,
+        #     heads = 8,
+        #     mlp_dim = 1024,
+        #     dim_head = 64,
+        #     dropout = 0.0,
+        #     emb_dropout = 0.0,
+        #     norm = "layer",
+        #     context_dim = 1280,
+        # ),
+        
+    ),
+    # head=dict(
+    #     type='PareHeadwCoKe',
+    #     num_joints=24, 
+    #     num_input_features=2048,
+    #     use_heatmaps='part_segm',
+    #     smpl_mean_params='data/body_models/smpl_mean_params.npz',
+    #     coke_cfg=dict(
+    #     type='CoKeHead', #'CoKeHeadMultiScale', 
+    #     d_coke_feat=d_feature, ),
+    #     ),
     body_model_train=body_model,
     body_model_test=dict(
         type='SMPL',

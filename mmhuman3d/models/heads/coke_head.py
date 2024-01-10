@@ -39,7 +39,7 @@ class CoKeHead(BaseModule):
 
     def __init__(self, d_coke_feat=128, frozen=False):
         super(CoKeHead, self).__init__()
-        self.upsample0 = DoubleConv(2048, 1024)
+        self.upsample0 = DoubleConv(768, 1024) #self.upsample0 = DoubleConv(2048, 1024)
         self.upsample1 = Up(2048, 1024, 512)
         self.upsample2 = Up(1024, 512, 256)
         self.upsample3 = Up(512, 256, 256)

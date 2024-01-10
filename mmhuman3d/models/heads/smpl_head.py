@@ -12,7 +12,7 @@ from mmhuman3d.models.components.pose_transformer import TransformerDecoder
 from ..builder import HEADS
 
 def build_smpl_head(cfg):
-    smpl_head_type = cfg.get('TYPE', 'hmr')
+    smpl_head_type = cfg.get('type', 'hmr')
     if  smpl_head_type == 'transformer_decoder':
         return SMPLTransformerDecoderHead(cfg)
     else:
@@ -53,9 +53,9 @@ class SMPLTransformerDecoderHead(BaseModule):
             nn.init.xavier_uniform_(self.deccam.weight, gain=0.01)
 
         mean_params = np.load(cfg.SMPL.MEAN_PARAMS)
-        init_body_pose = torch.from_numpy(mean_params['pose'].astype(np.float32)).unsqueeze(0)
-        init_betas = torch.from_numpy(mean_params['shape'].astype('float32')).unsqueeze(0)
-        init_cam = torch.from_numpy(mean_params['cam'].astype(np.float32)).unsqueeze(0)
+        init_body_pose = torch.from_numpy(mean_params['pose'][:]).unsqueeze(0)#torch.from_numpy(mean_params['pose'].astype(np.float32)).unsqueeze(0)
+        init_betas = torch.from_numpy(mean_params['shape'][:].astype('float32')).unsqueeze(0)#torch.from_numpy(mean_params['shape'].astype('float32')).unsqueeze(0)
+        init_cam = torch.from_numpy(mean_params['cam']).unsqueeze(0)#torch.from_numpy(mean_params['cam'].astype(np.float32)).unsqueeze(0)
         self.register_buffer('init_body_pose', init_body_pose)
         self.register_buffer('init_betas', init_betas)
         self.register_buffer('init_cam', init_cam)
